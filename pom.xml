@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ocp.book</groupId>
+    <artifactId>java-se17-ocp-examples</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>Oracle Certified Professional Java SE 17 - Examples</name>
+    <description>Complete Maven build for all OCP Java SE 17 book examples</description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <!-- Submódulos por capítulo -->
+    <modules>
+        <!-- Capítulos con archivos pom.xml creados -->
+        <module>OCP_Ch01</module>
+        <module>OCP_Ch03</module>
+        <module>OCP_Ch05</module>
+        <module>OCP_Ch09</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <!-- Plugin para compilación Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                    <release>17</release>
+                    <encoding>UTF-8</encoding>
+                    <!-- Configuración para permitir default package -->
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                        <arg>-Xlint:-options</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para ejecución de ejemplos -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+
+            <!-- Plugin para limpiar archivos .class existentes -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>.</directory>
+                            <includes>
+                                <include>**/*.class</include>
+                            </includes>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <!-- Perfil para compilar solo ejemplos básicos (Ch01-Ch10) -->
+        <profile>
+            <id>basic-examples</id>
+            <modules>
+                <module>OCP_Ch01</module>
+                <module>OCP_Ch02</module>
+                <module>OCP_Ch03</module>
+                <module>OCP_Ch04</module>
+                <module>OCP_Ch05</module>
+                <module>OCP_Ch06</module>
+                <module>OCP_Ch07</module>
+                <module>OCP_Ch08</module>
+                <module>OCP_Ch09</module>
+                <module>OCP_Ch10</module>
+            </modules>
+        </profile>
+
+        <!-- Perfil para compilar solo módulos Java 9+ (Ch19-Ch25) -->
+        <profile>
+            <id>modular-examples</id>
+            <modules>
+                <module>OCP_Ch19</module>
+                <module>OCP_Ch20</module>
+                <module>OCP_Ch21</module>
+                <module>OCP_Ch22</module>
+                <module>OCP_Ch23</module>
+                <module>OCP_Ch24</module>
+                <module>OCP_Ch25</module>
+            </modules>
+        </profile>
+    </profiles>
+
+</project>

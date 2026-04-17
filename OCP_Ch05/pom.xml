@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ocp.book</groupId>
+        <artifactId>java-se17-ocp-examples</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ocp-ch05-examples</artifactId>
+    <packaging>pom</packaging>
+    <name>OCP Chapter 05 - Examples</name>
+
+    <modules>
+        <module>Chap05_Examples</module>
+        <module>Example_5_1</module>
+        <module>Example_5_10</module>
+        <module>Example_5_11</module>
+        <module>Example_5_12</module>
+        <module>Example_5_14</module>
+        <module>Example_5_15</module>
+        <module>Example_5_16</module>
+        <module>Example_5_17</module>
+        <module>Example_5_18</module>
+        <module>Example_5_19</module>
+        <module>Example_5_2</module>
+        <module>Example_5_20</module>
+        <module>Example_5_21</module>
+        <module>Example_5_22</module>
+        <module>Example_5_23</module>
+        <module>Example_5_24</module>
+        <module>Example_5_25</module>
+        <module>Example_5_26</module>
+        <module>Example_5_3</module>
+        <module>Example_5_4</module>
+        <module>Example_5_5</module>
+        <module>Example_5_6</module>
+        <module>Example_5_7</module>
+        <module>Example_5_8</module>
+        <module>Example_5_9</module>
+    </modules>
+</project>
