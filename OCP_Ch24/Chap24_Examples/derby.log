@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Mar 26 00:37:24 CET 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-017f-c371-1abc-00000791eff8 
+on database directory /Volumes/Local/mySvns/pgj8ocp/trunk/JavaSE17_OCP_Book_2022/OCP_Ch24/Chap24_Examples/musicDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca 
+Loaded from file:/Volumes/Local/mySvns/pgj8ocp/trunk/JavaSE11_complete/PGJ8_OCP_Ch13/Chap13_Examples/db-derby-10.15.2.0-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.2+8-LTS-86
+user.dir=/Volumes/Local/mySvns/pgj8ocp/trunk/JavaSE17_OCP_Book_2022/OCP_Ch24/Chap24_Examples
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.7
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
